@@ -6,6 +6,7 @@ import net.mamoe.mirai.console.plugin.jvm.JvmPluginDescriptionBuilder;
 import net.mamoe.mirai.internal.deps.okhttp3.OkHttpClient;
 import top.nlrdev.random_animals.commands.RandomCat;
 import top.nlrdev.random_animals.commands.RandomDog;
+import top.nlrdev.random_animals.commands.RandomDuck;
 import top.nlrdev.random_animals.commands.RandomFox;
 import top.nlrdev.random_animals.config.PluginConfig;
 
@@ -20,7 +21,7 @@ public final class RandomAnimals extends JavaPlugin {
     public static final ExecutorService watchExecutorService = Executors.newFixedThreadPool(8);
 
     private RandomAnimals() {
-        super(new JvmPluginDescriptionBuilder("top.nlrdev.random-animals", "1.0.0")
+        super(new JvmPluginDescriptionBuilder("top.nlrdev.random-animals", "1.0.1")
                 .name("Random Animals")
                 .author("NLR DevTeam")
                 .build());
@@ -33,5 +34,6 @@ public final class RandomAnimals extends JavaPlugin {
         CommandManager.INSTANCE.registerCommand(new RandomCat(), true);
         CommandManager.INSTANCE.registerCommand(new RandomDog(), true);
         CommandManager.INSTANCE.registerCommand(new RandomFox(), true);
+        CommandManager.INSTANCE.registerCommand(new RandomDuck(), true);
     }
 }

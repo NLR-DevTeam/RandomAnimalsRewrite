@@ -30,4 +30,13 @@ public class DownloadUtil {
     public static ExternalResource downloadAndParse(String jsonURL, String jsonKey) throws IOException {
         return downloadAndParse(jsonURL, jsonKey, JSONObject::new);
     }
+
+    public static ExternalResource downloadAndConvert(String imageURL) throws IOException {
+        Request request = new Request.Builder().url(imageURL).build();
+        Response response = RandomAnimals.globalClient.newCall(request).execute();
+
+        if (response.body() == null) throw new IOException("Response body is null.");
+
+        return ExternalResource.create(response.body().bytes());
+    }
 }
