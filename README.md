@@ -10,3 +10,14 @@
 - 狗狗 -> `random.dog`
 - 狐狐 -> `randomfox.ca`
 - 鸭鸭 -> `random-d.uk`
+
+## 权限节点
+- 随机猫猫 `top.nlrdev.random-animals:command.random-cat`
+- 随机狗狗 `top.nlrdev.random-animals:command.random-dog`
+- 随机狐狐 `top.nlrdev.random-animals:command.random-fox`
+- 随机鸭鸭 `top.nlrdev.random-animals:command.random-duck`
+
+## 注意
+Releases 中的文件全部使用 Java 17 编译  
+因此此插件默认需要 JRE 17+  
+请不要使用低版本 Java
